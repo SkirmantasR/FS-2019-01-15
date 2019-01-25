@@ -1,0 +1,16 @@
+#fundamentals{
+    margin-top: 56px;
+}
+
+@media (min-width: 760px){
+    #fundamentals{
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 992px){
+    #fundamentals{
+        margin-top: 56px;
+    }
+}
+    
