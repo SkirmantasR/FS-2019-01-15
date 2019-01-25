@@ -1,0 +1,28 @@
+
+    h1{
+        color:blue;
+    }
+        
+    a{
+        text-decoration;
+    } 
+    .link-img{
+        height: 40px;
+    }
+             nav{
+        background: rgb(0, 0, 255)
+        padding; 10px;
+    }
+    nav a{
+        color: #000
+    }
+    body{
+        margin: 0;
+    }
+    .conmtainer{
+        width: 1200px;
+        margin: auto;
+    }
+    nav a:hover{
+        color; #fff
+    }

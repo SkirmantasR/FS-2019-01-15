@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    background: rgba(240, 128, 128, 0.137);
+    opacity: .5;
+}
+
+.cover{
+    background: url(img/sd.png);
+    background-size: cover;
+    height: 100vh;}
+nav{
+    background: blue;
+    padding: 10px;
+}
+nav a{
+    color: #000;
+
+}
+nav a:hover{
+    color: #fff;
+}
+
+.container{
+    background: red;
+    width: 960px;
+    margin: auto;
+}
+
+h1{
+ color: red; 
+ }
+
+a{
+    text-decoration: none;
+}  
+
+.link-img{
+    height: 40px;
+}
+.panel1{
+    box-sizing: border-box;
+    overflow: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: green;
+}
+.panel2{
+    float: left;
+    padding: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: aqua;
+    display: inline-block;
+    background-color: red;
+}
+.panel3{
+    float: left;
+    padding: 20px;
+    margin: 0px;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: yellow;
+}
+.panel4{
+    float: left;
+    padding: 0px;
+    margin: 20px;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: blue;
+}
+
+.contact{
+    background: url(img/foto.png);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-bottom:15px;
+    
+}
+.contact-left{
+    float:left;
+    margin-right:15px;
+}
+
+.contact-right{
+    float:right;
+    margin-left: 15px;
+}
+
+.clear-fix{
+    display: block;
+    height: 0;
+    clear: both;
+    width: 100%;
+}
+.contact-text:nth-child(2n){
+    text-align: right;
+
+}

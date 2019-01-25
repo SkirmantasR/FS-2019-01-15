@@ -1,0 +1,9 @@
+#fundamentals{
+    margin-top: 56px;
+}
+@media only screen and (min-width: 845px)and (max-width: 1090px){
+    #fundamentals{
+            margin-top: 70px;
+    }
+
+}
