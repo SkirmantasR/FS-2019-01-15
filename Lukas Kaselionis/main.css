@@ -1,0 +1,113 @@
+body {
+    margin: 0px;
+    background: lightcoral;
+    opacity: 1;
+}
+
+.cover {
+    background: url(img/background.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {   
+    background: blue;
+    padding: 5px;
+}
+
+nav>a {
+    color: black;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.container {
+    background: red;
+    width: 1200px;
+    margin: auto;
+    
+}
+
+h1 {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+    }
+
+.link-img {
+    width: 40px;
+    height: 40px;
+}
+
+.panel1 {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: red;
+}
+
+.panel2 {
+    padding: 10px;
+    margin: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: aqua;
+    display: inline-block;
+    background-color: green;
+}
+
+.panel3 {
+    padding: 20px;
+    margin: 0;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: blue;
+}
+
+.panel4 {
+    padding: 0;
+    margin: 20px;
+    border: 5px solid magenta;
+    display: inline-block;
+    background-color: yellow;
+}
+
+.contact { 
+    background: url(img/contact.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-bottom: 15px;
+}
+
+.contact-left {
+    float: left;
+    margin-left: 15px;
+}
+
+.contact-right {
+    float: right;
+    margin-right: 15px;
+}
+
+.clear-fix { 
+    display: block;
+    height: 0px;
+    clear: both;
+    width: 100%;
+}
+
+TIK MOKYMO TIKSLAIS 
+.contact-texts:nth-child(2n) {
+    text-align: right;
+}
+
