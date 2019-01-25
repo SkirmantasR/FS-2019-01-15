@@ -1,0 +1,15 @@
+#fundamentals{
+    margin-top: 56px;
+}
+
+@media (min-width: 768px) {
+    #fundamentals {
+        margin-top: 70px;
+    }
+}
+
+@media (min-width: 992px) {
+    #fundamentals {
+        margin-top: 56px;
+    }
+}
