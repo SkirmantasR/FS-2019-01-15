@@ -1,0 +1,34 @@
+Interneto veikimas:
+  hosting:                      https://www.youtube.com/watch?v=MaW5MNx8l9E
+  Domain name server:           https://www.youtube.com/watch?v=72snZctFFtA&t=243s
+
+Front end:
+  Create full Website:          https://www.youtube.com/watch?v=0zi7iyMX7lU&index=18&list=PLLnpHn493BHHhCVlCRhAMpeFwDH2BTE3p
+  HTML:
+    HTML crash course:          https://www.youtube.com/watch?v=UB1O30fR-EE&t=2492s
+    HTML elements:              https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+    HTML attributes:            https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+  CSS: 
+    CSS crash course:          https://www.youtube.com/watch?v=yfoY53QXEnI
+    CSS selectors:              https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+    CSS selectors example:      https://learn.shayhowe.com/advanced-html-css/complex-selectors/ 
+    CSS properties:             https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+    CSS must-know-properties:   https://  zellwk.com/blog/9-important-css-properties-you-must-know/
+    CSS specifity:              https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+Programinė įranga:
+  Nemokamas teksto redaktorius: https://code.visualstudio.com/
+  Naršyklė su kuria dirbsime:   https://www.google.com/chrome/
+
+Reikia turėti 
+  kompą ||* USB raktą ||* paštą, informacijos persisiuntymui.                    
+  Mano draugelis, kuris pasiūlys kompą su geriausiu kainos/kokybės santykiu:
+    Vaidelis: 
+      Mob. nr:    865897526 
+      El. paštas: Vaidotasbabkaitis@gmail.com
+  // (Vaidotas Babkaitis). Paminėkit, kad nuo Žilvino
+
+
+Paaiškinimai:
+  * || - Arba operatorius
+
