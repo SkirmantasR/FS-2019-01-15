@@ -8,13 +8,43 @@ Front end:
     HTML crash course:          https://www.youtube.com/watch?v=UB1O30fR-EE&t=2492s
     HTML elements:              https://developer.mozilla.org/en-US/docs/Web/HTML/Element
     HTML attributes:            https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+    
   CSS: 
-    CSS crash course:          https://www.youtube.com/watch?v=yfoY53QXEnI
+    CSS crash course:           https://www.youtube.com/watch?v=yfoY53QXEnI
     CSS selectors:              https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
     CSS selectors example:      https://learn.shayhowe.com/advanced-html-css/complex-selectors/ 
     CSS properties:             https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
     CSS must-know-properties:   https://  zellwk.com/blog/9-important-css-properties-you-must-know/
     CSS specifity:              https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+    CSS flexbox                 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    Bootstrap:                  https://getbootstrap.com/
+
+  Puslapio kūrimui naudingos nuroodos:
+    Background paterns:         https://www.heropatterns.com/
+    Bootstrap themes:           https://bootswatch.com/
+    Fonts:                      https://fonts.google.com/
+    Icons:                      
+      https://fontawesome.com/?from=io
+      https://www.s-ings.com/typicons/
+
+    Puslapio spalvų paletės kūrimui:
+      http://colrd.com/@/thisisthejellyfish/
+      https://color.adobe.com/create/color-wheel/
+      http://paletton.com/#uid=1000u0kgniG8Zsadkn1kVflpJbe
+
+    Idėjoms pasisemti:
+      http://www.themezilla.com/themes/hype/
+      https://dribbble.com/
+      https://www.thebestdesigns.com/
+      https://siiimple.com/
+      https://www.cssdsgn.com/
+      https://bestwebsite.gallery/
+      http://styleboost.com/
+      https://www.siteinspire.com/  
+      https://www.admiretheweb.com/blog/
+
+    Jeigu norite nusivilti, žiūrėti čia:
+      http://kenjiendo.com/album/?fbclid=IwAR3IrEbeZy50XLa1cSwYJbH2k9F8SGERmnJ6ej6uXWgw19zs1sUYxjjMM7Y
 
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
@@ -22,11 +52,11 @@ Programinė įranga:
 
 Reikia turėti 
   kompą ||* USB raktą ||* paštą, informacijos persisiuntymui.                    
-  Mano draugelis, kuris pasiūlys kompą su geriausiu kainos/kokybės santykiu:
+  Mano draugas, kuris pasiūlys kompą su geriausiu kainos/kokybės santykiu:
     Vaidelis: 
       Mob. nr:    865897526 
       El. paštas: Vaidotasbabkaitis@gmail.com
-  // (Vaidotas Babkaitis). Paminėkit, kad nuo Žilvino
+      Vaidotas Babkaitis. Paminėkit, kad nuo Žilvino
 
 
 Paaiškinimai:
