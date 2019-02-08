@@ -1,16 +1,15 @@
-﻿WINDOWS KOMANDOS ----------------------------------------------------
+﻿	WINDOWS KOMANDOS ----------------------------------------------------
     CTRL + C                        - Kopijuoti
     CTRL + X                        - Iškirpti
     CTRL + V                        - Įklijuoti
-    CTRL + Z                        - Grąžint atgal
+    CTRL + Z                        - Grąžint atgal ss
     CTRL + S                        - Išsaugoti
     ALT  + TAB                      - Pakeičia langą
     F11                             - Išdidina ekraną
-    SHIFT + (rodyklės)              - Pažymi tai, kur juda žymeklis
 NARŠYKLĖS KOMANDOS --------------------------------------------------
     F5                              - Perkrauti puslapį, naršyklėje
     F12                             - Programuotojo lango atidarymas
-VISUAL STUDIO CODE KOMANDOS -----------------------------------------------
+VISUAL STUDIO KOMANDOS -----------------------------------------------
     CTRL + SPACE                    - Duoda pasirinkimą
     CTRL + ALT + (rodyklė)          - daugybinis žymėjimas
     ALT + mouse-click               - Keleto žymeklių kūrimas

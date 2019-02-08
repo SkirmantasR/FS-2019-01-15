@@ -1,4 +1,4 @@
-Interneto veikimas:
+﻿Interneto veikimas:
   hosting:                      https://www.youtube.com/watch?v=MaW5MNx8l9E
   Domain name server:           https://www.youtube.com/watch?v=72snZctFFtA&t=243s
 
@@ -7,14 +7,15 @@ Front end:
   HTML:
     HTML crash course:          https://www.youtube.com/watch?v=UB1O30fR-EE&t=2492s
     HTML elements:              https://developer.mozilla.org/en-US/docs/Web/HTML/Element
-    HTML attributes:            https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+    HTML attributes:            https://www.w3schools.com/html/html_attributes.asp
   CSS: 
-    CSS crash course:          https://www.youtube.com/watch?v=yfoY53QXEnI
-    CSS selectors:              https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+    CSS crash course:           https://www.youtube.com/watch?v=yfoY53QXEnI
+    CSS crash course2:          https://www.youtube.com/watch?v=UB1O30fR-EE&t=2493s
+    CSS selectors:              https://www.w3schools.com/cssref/css_selectors.asp
     CSS selectors example:      https://learn.shayhowe.com/advanced-html-css/complex-selectors/ 
-    CSS properties:             https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
-    CSS must-know-properties:   https://  zellwk.com/blog/9-important-css-properties-you-must-know/
-    CSS specifity:              https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+    CSS properties:             https://www.w3schools.com/cssref/
+    CSS must-know-properties:   https://zellwk.com/blog/9-important-css-properties-you-must-know/
+    CSS specifity:              https://www.w3schools.com/css/css_specificity.asp
 
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
@@ -28,7 +29,7 @@ Reikia turėti
       El. paštas: Vaidotasbabkaitis@gmail.com
   // (Vaidotas Babkaitis). Paminėkit, kad nuo Žilvino
 
+MDN Mozila - school
 
 Paaiškinimai:
   * || - Arba operatorius
-
