@@ -2,48 +2,200 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pirmas puslapis</title>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music on Rails</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Source+Serif+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+
 </head>
 
 <body>
-  <nav>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
     <div class="container">
-      <a href="#pagrindinis">Pagrindinis</a>
-      <a href="">Apie</a>
-      <a href="">Kontaktai</a>
-      <a href="">Galerija</a>
+        <a class="navbar-brand header-font" href="#">Music On Rails</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Instrument families</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Keyboard</a>
+                        <a class="dropdown-item" href="#">String</a>
+                        <a class="dropdown-item" href="#">Wind</a>
+                        <a class="dropdown-item" href="#">Percussion</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Message Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <h1>Mano pirmasis puslapis</h1>
+<section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="text-center header-font">
+        <h1 class="display-1">Music On Rails</h1>
+        <h3 class="h2">Echo of your life</h3>
+    </div>
+</section>
 
-  <h3>Antraščių dydžiai</h3>
+<section id="aboutUs">
+    <h1 class="display-2 my-4">About us</h1>
+    <p class="h3 paragraf align-items-cente">
+        Launched in 2003 and now with over 1.3 million registered customers, MuzicOnRail.com is a leading retailer of
+        musical instruments and music equipment. You can buy music gear from orchestral instruments to rock 'n' roll,
+        including guitars, drum kits, digital pianos, saxophones and cellos, plus leading recording and studio
+        equipment.
 
-  <h6>Šešto dydžio antraštė</h6>
-  <h5>Penkto dydžio antraštė</h5>
-  <h4>Ketvirto dydžio antraštė</h4>
-  <h3>Trečio dydžio antraštė</h3>
-  <h2>Antro dydžio antraštė</h2>
-  <h1>Pirmo dydžio antraštė</h1>
-  <hr>
+        From starter guitars to pro microphones and amps, the MuzicOnRail.com online music shop has a huge range of
+        music equipment available. Whether you're looking for a violin, keyboard, electronic drum kit or PA system, we
+        can help.
 
-  <h3 id="pagrindinis">Nuorodos</h3>
-  <a href="https://www.youtube.com/"><img class="link-img" src="img/youtube-icon.jpg" alt="Youtube"></a>
-  <a href="https://www.google.lt/">
-    <img 
-      class="link-img"
-      src="https://yt3.ggpht.com/a-/AN66SAxRza35mbU9_KZOIhLVcgnLEnLE2wRB30AFGQ=s900-mo-c-c0xffffffff-rj-k-no" 
-      alt="Google"
-    >
-  </a>
-  <a href="http://www.sostena.lt/">Sostena</a>
-  <a href="https://www.delfi.lt/">Delfi</a>
+        We've got some of the biggest brands in stock, including Yamaha, Roland, Casio, Fender, Ibanez, Alesis,
+        Behringer & Gibson, as well as our own great value MuzicOnRail music product range.
 
+        To receive excellent service and a great price on your next musical instrument purchase, try us now!
+    </p>
 
+    <!--<iframe class="video" src="https://www.youtube.com/embed/62udbISODag" frameborder="0"-->
+    <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+</section>
+
+<section class="cover cover-1 d-flex justify-content-center align-items-center">
+    <h1 class="display-1 header-font">Instrument families</h1>
+</section>
+
+<!--Nuorodos-->
+
+<section id="instrumentFamilies" class="content">
+    <div class="families-container container row text-center flex col align-items-center">
+
+        <section class="col slaid">
+            <h3>Keyboard instruments are often classified as percussion instruments because they play a rhythmic
+                role in some music.</h3>
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="style/img/piano1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/piano2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/rose_piano.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="link h2 "
+                   href="https://www.edu.xunta.es/espazoAbalar/sites/espazoAbalar/files/datos/1461829433/contido/keyboards.html"
+                   class="href">Keyboards</a>
+            </div>
+        </section>
+
+        <section class="col slaid">
+            <a class="link h2"
+               href="https://www.edu.xunta.es/espazoAbalar/sites/espazoAbalar/files/datos/1461829433/contido/string_instruments.html"
+               class="href">String</a>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="style/img/string1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/string2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/string3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <h3>A string is a stretched piece of wire or nylon on a musical instrument that produces a musical
+                    note when the instrument is played. </h3>
+            </div>
+        </section>
+
+        <section class="col slaid">
+            <h3>They are any musical instrument that you play by blowing.</h3>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-inline w-100" src="style/img/wind1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-inline w-100" src="style/img/wind2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-inline w-100" src="style/img/wind3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="link h2"
+                   href="https://www.edu.xunta.es/espazoAbalar/sites/espazoAbalar/files/datos/1461829433/contido/wind_instruments.html"
+                   class="href text-center">Wind</a>
+            </div>
+        </section>
+
+        <section class="col slaid">
+            <a class="link h2"
+               href="https://www.edu.xunta.es/espazoAbalar/sites/espazoAbalar/files/datos/1461829433/contido/percussion1.html"
+               class="href">Percussion</a>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="style/img/Percussion.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/Percussion1.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="style/img/Percussion2.jpg" alt="Third slide">
+                    </div>
+                </div>
+
+                <h3>The percussion family is the largest in the orchestra. It includes lots of instruments that are
+                    used to keep the rhythm, create texture, make special sounds and even play different notes.</h3>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <footer id="main-footer" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center py-4">
+                        <h3>Muzic on rails</h3>
+                        <p>Copyright &copy; 2019</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </section>
+
+    <section class="cover cover-2"></section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
