@@ -9,6 +9,11 @@ h1, h2, h3, h4, h5{
   color: #863429;
   text-shadow: 3px 3px 3px #000;
 }
+
+.anchor{
+  padding: 56px; 
+  margin: -56px;
+}
 .bg-black{
   background-color: #432814;
 }
@@ -60,9 +65,15 @@ h1, h2, h3, h4, h5{
               0  20px 20px #00000011 inset,
               0 -20px 20px #00000011 inset;
 }
+
 .header-low{
   position: relative;
   top: 210px;
+}
+
+.header-high{
+  position: relative;
+  bottom: 110px;
 }
 
 .cover-1{ background-image: url(img/cover1.jpg)}
@@ -119,6 +130,22 @@ h1, h2, h3, h4, h5{
 .family-img-carousel{
   height: 500px;
 }
+
+/* Formos stiliai */
+
+#feedback{
+  position: relative;
+}
+#form-feedback{
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  background: #ffffffd0;
+  padding: 30px;
+  border-radius: 7px;
+  box-shadow: 7px 7px 5px 6px #000; 
+}
+
 
 .family-group-title{ font-size: 100px}
 
