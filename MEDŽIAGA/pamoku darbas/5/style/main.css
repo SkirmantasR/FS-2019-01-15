@@ -68,18 +68,18 @@ h1, h2, h3, h4, h5{
 .cover-1{ background-image: url(img/cover1.jpg)}
 .cover-2{ background-image: url(img/cover2.jpg)}
 
+/* Instrumentų šeimų kortelės */
 #instrumentFamilies{
   padding: 30px;
 }
 
-/* Instrumentų šeimų kortelės */
 .family-img-container{
   padding: 40px;
-  height: 400px;
+  height: 550px;
   transition: all 0.3s ease-in-out;
 }
 
-.family-img-container a{text-decoration: none}
+.family-img-container a{ text-decoration: none}
 
 .family-img-container:hover{
   padding: 0;
@@ -96,10 +96,11 @@ h1, h2, h3, h4, h5{
   font-size: 70px;
   color: #ffffff00;
   transition: 
-    box-shadow 0.6s ease-in-out,
+    box-shadow .6s ease-in-out,
     color .6s ease-in,
     text-shadow .6s ease-in;
 }
+
 .family-img:hover{
   box-shadow: 9px 9px 6px 2px#000;
   text-shadow: 4px 4px 2px  #000;
@@ -108,12 +109,18 @@ h1, h2, h3, h4, h5{
 
 .family-img:hover::after{
   position: absolute;
-  top:40%;
+  top: 37%;
   content: attr(title);
   text-align: center;
   display: block;
   width: 100%;
 }
+
+.family-img-carousel{
+  height: 500px;
+}
+
+.family-group-title{ font-size: 100px}
 
 .keyboard{ background-image: url(img/keyboard.jpg)}
 .strings{ background-image: url(img/strings.jpg)}
@@ -122,12 +129,24 @@ h1, h2, h3, h4, h5{
 
 /* iki SM */
 @media (max-width: 575.98px) {
+  .content{
+    min-height: 200px;
+  }
 
+  .family-img-carousel{
+    height: 200px;
+  }
+
+  .family-group-title{ font-size: 45px}
 }
 
 /* iki MD */
-@media (max-width: 767.98px) {
+@media  (min-width: 575.98px) and (max-width: 767.98px) {
+  .family-img-carousel{
+    height: 350px;
+  }
 
+  .family-group-title{ font-size: 70px}
 }
 
 /* iki LG */
@@ -140,5 +159,9 @@ h1, h2, h3, h4, h5{
   .video{
     height: 664px;
     width: 930px;
+  }
+
+  .family-img-container{
+    height: 400px;
   }
 }
