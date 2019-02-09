@@ -11,8 +11,8 @@ h1, h2, h3, h4, h5{
 }
 
 .anchor{
-  padding: 56px; 
-  margin: -56px;
+  padding-top: 56px; 
+  margin-top: -56px;
 }
 .bg-black{
   background-color: #432814;
@@ -60,10 +60,11 @@ h1, h2, h3, h4, h5{
   height: 80vh;
   background-size: cover;
   background-attachment: fixed;
-  box-shadow: 0  3px 10px #000000 inset, 
-              0 -3px 10px #000000 inset,
-              0  20px 20px #00000011 inset,
-              0 -20px 20px #00000011 inset;
+  box-shadow: 
+    0  3px 10px #000000 inset, 
+    0 -3px 10px #000000 inset,
+    0  20px 20px #00000011 inset,
+    0 -20px 20px #00000011 inset;
 }
 
 .header-low{
@@ -154,6 +155,24 @@ h1, h2, h3, h4, h5{
 .wind{ background-image: url(img/wind.jpg)}
 .drums{ background-image: url(img/drums.jpg)}
 
+/* Footerio stilizavimas */
+#footer{
+  box-shadow: 0 -2px 2px #000;
+}
+#contacts{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.icon-container{
+  width: 16px;
+  margin-right: 7px;
+}
+
+.map-container{
+  height: 300px;
+}
+
+
 /* iki SM */
 @media (max-width: 575.98px) {
   .content{
@@ -165,6 +184,10 @@ h1, h2, h3, h4, h5{
   }
 
   .family-group-title{ font-size: 45px}
+
+  .map-container{
+    height: 250px;
+  }
 }
 
 /* iki MD */
@@ -174,6 +197,10 @@ h1, h2, h3, h4, h5{
   }
 
   .family-group-title{ font-size: 70px}
+
+  .map-container{
+    height: 350px;
+  }
 }
 
 /* iki LG */

@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta id="myViewport" name="viewport" content="width = 380">
   <title>Music on Rails</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lobster|Source+Serif+Pro" rel="stylesheet">
   <link rel="stylesheet" href="style/main.css">
@@ -133,9 +136,7 @@
 
   <section class="cover cover-2">
     <div class="d-flex justify-content-center align-items-center h-100">
-      <h1 class="display-1 header-font header-high">
-        <a class="anchor" id="messageUs"></a>Message Us!
-      </h1>
+      <h1 id="messageUs" class="display-1 header-font header-high anchor">Message Us!</h1>
     </div>
   </section>
 
@@ -151,7 +152,7 @@
           <input type="email" class="form-control" id="email" placeholder="toby@flute.com">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <label for="exampleFormControlTextarea1">Your feedback</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="12"></textarea>
         </div>
         <input type="submit" class="btn btn-primary btn-lg d-block mx-auto" value="Send message">
@@ -159,20 +160,40 @@
     </div>
   </section>
 
-  <section class="bg-black text-light">
-    <div id="contacts" class="content container">
-      <div class="row h-100">
-        <div class="col-5">
-          <h4>Parduotuvė Kaune</h4>
+  <section id="footer" class="bg-black text-light">
+    <div id="contacts" class="container">
+      <div class="row mx-3 m-sm-0">
+        <div class="offset-sm-4 offset-md-0 col-md-5 mb-3">
+          <h4 class="text-left">Parduotuvė Kaune</h4>
           <div class="footer-info">
-            <div class="my-3">Kęstučio g. 6a, Kaunas</div>
-            <div class="my-3"><a href="tel:+37068626475"><i class="fas fa-phone"></i>8 686 26475</a></div>
-            <div class="my-3"><a href="mailto:kaunas@tamsta.com">kaunas@tamsta.com</a></div>
+
+            <div class="my-3">
+              <span class="icon-container"><i class="fas fa-map-marker-alt"></i></span>
+              <span>Kęstučio g. 6a, Kaunas</span>
+            </div>
+
+            <div class="my-3">
+              <span class="icon-container"><i class="fas fa-phone"></i></span>
+              <a class="text-light" href="tel:+370 6 08 09 866"> +370 6 08 09 866</a>
+            </div>
+
+            <div class="my-3">
+              <span class="icon-container"><i class="fas fa-at"></i></span>
+              <a class="text-light" href="mailto:paula@codeacademy.lt">Paula@codeacademy.lt</a>
+            </div>
+
+            <h4 class="my-3 text-left">Darbo laikas</h4>
             <div class="my-3">Pr - Pn 11:00 - 19:00<br>Š 11:00 - 15:00</div>
           </div>
         </div>
-        <div class="col-7">Zemelapis</div>
+        <div class="col-sm-12 col-md-7 bg-success">
+          <div class="map-container">
+
+          </div>
+        </div>
       </div>
+    </div>
+    <hr>
     </div>
   </section>
 
