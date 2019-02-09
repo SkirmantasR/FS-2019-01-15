@@ -52,6 +52,9 @@ Front end:
       https://dramosteatras.lt/muziejus/index.html
       https://threejs.org/examples/css3d_periodictable.html?fbclid=IwAR3nK7v-7gGjU-_wlCssfVQz5LoJK3eMPVaoLwSbbojHmg-zErozB38osYs
 
+    Scroll animacijos:
+      https://alvarotrigo.com/multiScroll/?fbclid=IwAR14jaF30m5BBN-dkkQAxLjjAnetesOJTSzmHRw1zd0FvBxdtmaOeG5b7Vc#second
+
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
   Naršyklė su kuria dirbsime:   https://www.google.com/chrome/
