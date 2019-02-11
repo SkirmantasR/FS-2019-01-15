@@ -20,17 +20,17 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top">
     <div class="container">
       <a class="navbar-brand header-font" href="#">Music On Rails</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#aboutUs">About us</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" href="" data-toggle="dropdown">Instrument families</a>
+            <a class="nav-link dropdown-toggle" role="button" href="#" data-toggle="dropdown">Instrument families</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="views/keyboard.html">Keyboard</a>
               <a class="dropdown-item" href="views/strings.html">String</a>
@@ -57,7 +57,7 @@
   </section>
 
   <section id="aboutUs" class="anchor">
-    <h1 class="display-2 my-4">About us</h1>
+    <h1 class="display-1 my-4">About us</h1>
     <iframe class="video" src="https://www.youtube.com/embed/62udbISODag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   </section>
@@ -152,8 +152,8 @@
           <input type="email" class="form-control" id="email" placeholder="toby@flute.com">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Your feedback</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="12"></textarea>
+          <label for="msg-feedback">Your feedback</label>
+          <textarea class="form-control" id="msg-feedback" rows="12" ></textarea>
         </div>
         <input type="submit" class="btn btn-primary btn-lg d-block mx-auto" value="Send message">
       </form>
@@ -162,7 +162,7 @@
 
   <section id="footer" class="bg-black text-light">
     <div id="contacts" class="container">
-      <div class="row mx-3 m-sm-0">
+      <div class="row m-sm-0">
         <div class="offset-sm-4 offset-md-0 col-md-5 mb-3">
           <h4 class="text-left">Parduotuvė Kaune</h4>
           <div class="footer-info">
@@ -188,24 +188,38 @@
         </div>
         <div class="col-sm-12 col-md-7">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3478291064466!2d23.912274415897492!3d54.896816980333085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722741304296f%3A0xbfad6a6196cbce29!2sLaisv%C4%97s+al.+51A%2C+Kaunas+44309!5e0!3m2!1slt!2slt!4v1549734319255"
-             frameborder="0" style="border:0" allowfullscreen class="map-container"></iframe>
+            frameborder="0" style="border:0" allowfullscreen class="map-container"></iframe>
+        </div>
+
+      </div>
+      <hr class="border-light">
+      <div class="row no-gutters">
+        <div class="col-sm-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+          <div class="row text-sm-center">
+            <div class="col-4 col-sm p-sm-0 mb-2">
+              <a class="text-light" href="#aboutUs">About us</a>
+            </div>
+            <div class="col-4 col-sm p-sm-0 mb-2">
+              <a class="text-light" href="#messageUs">Message us</a>
+            </div>
+            <div class="col-4 col-sm p-sm-0 mb-2">
+              <a class="text-light" href="views/keyboard.html">Keyboard</a>
+            </div>
+            <div class="col-4 col-sm p-sm-0 mb-2">
+              <a class="text-light" href="views/strings.html">String</a>
+            </div>
+            <div class="col-4 col-sm p-sm-0 mb-2">
+              <a class="text-light" href="views/wind.html">Wind</a>
+            </div>
+            <div class="col-4 col-sm  mb-2">
+              <a class="text-light p-sm-0" href="views/drums.html">Drums</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    function initMap() {
-      let location = {
-        lat: 54.896800,
-        lng: 23.914490
-      };
-      let map = new google.maps.Map(document.querySelector('#map'), {
-        zoom: 4,
-        center: location
-      });
-    }
-  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

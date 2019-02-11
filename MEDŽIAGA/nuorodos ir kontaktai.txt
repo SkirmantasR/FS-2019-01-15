@@ -18,6 +18,9 @@ Front end:
     CSS specifity:              https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
     CSS flexbox                 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     Bootstrap:                  https://getbootstrap.com/
+  
+  Javascript:
+    JS crash course:            https://www.youtube.com/watch?v=vEROU2XtPR8&t=626sZNo7MFNFg
 
   Puslapio kūrimui naudingos nuroodos:
     Background paterns:         https://www.heropatterns.com/
