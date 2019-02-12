@@ -18,11 +18,15 @@ Front end:
     CSS specifity:              https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
     CSS flexbox                 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     Bootstrap:                  https://getbootstrap.com/
+  
+  Javascript:
+    JS crash course:            https://www.youtube.com/watch?v=vEROU2XtPR8&t=626sZNo7MFNFg
 
   Puslapio kūrimui naudingos nuroodos:
     Background paterns:         https://www.heropatterns.com/
     Shadow generator:           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
     Filter generator:           http://angrytools.com/css-generator/filter/
+    Filtrer examples:           https://developer.mozilla.org/en-US/docs/Web/CSS/filter
     Bootstrap themes:           https://bootswatch.com/
     Fonts:                      https://fonts.google.com/
     Icons:                      
@@ -51,6 +55,9 @@ Front end:
       http://kenjiendo.com/album/?fbclid=IwAR3IrEbeZy50XLa1cSwYJbH2k9F8SGERmnJ6ej6uXWgw19zs1sUYxjjMM7Y
       https://dramosteatras.lt/muziejus/index.html
       https://threejs.org/examples/css3d_periodictable.html?fbclid=IwAR3nK7v-7gGjU-_wlCssfVQz5LoJK3eMPVaoLwSbbojHmg-zErozB38osYs
+
+    Scroll animacijos:
+      https://alvarotrigo.com/multiScroll/?fbclid=IwAR14jaF30m5BBN-dkkQAxLjjAnetesOJTSzmHRw1zd0FvBxdtmaOeG5b7Vc#second
 
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
