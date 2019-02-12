@@ -26,6 +26,7 @@ Front end:
     Background paterns:         https://www.heropatterns.com/
     Shadow generator:           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
     Filter generator:           http://angrytools.com/css-generator/filter/
+    Filtrer examples:           https://developer.mozilla.org/en-US/docs/Web/CSS/filter
     Bootstrap themes:           https://bootswatch.com/
     Fonts:                      https://fonts.google.com/
     Icons:                      
