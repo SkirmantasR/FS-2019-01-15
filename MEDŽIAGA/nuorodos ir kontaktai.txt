@@ -21,6 +21,8 @@ Front end:
   
   Javascript:
     JS crash course:            https://www.youtube.com/watch?v=vEROU2XtPR8&t=626sZNo7MFNFg
+    JS use strict:              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+    JS iteraciniai metodai      https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
 
   Puslapio kūrimui naudingos nuroodos:
     Background paterns:         https://www.heropatterns.com/
