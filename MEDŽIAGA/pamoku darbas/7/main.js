@@ -52,73 +52,105 @@
 
 
 // ---------------------- SPLICE ----------------------------------
-let fruits1 = ['apple', 'banana', 'orange', 'grapes'];
-let fruits2 = ['watermelon', 'strawberry', 'gooseberry', 'cherry'];
-console.log('fruits1:');
-console.log(fruits1);
-console.log('fruits2:');
-console.log(fruits2);
+// let fruits1 = ['apple', 'banana', 'orange', 'grapes'];
+// let fruits2 = ['watermelon', 'strawberry', 'gooseberry', 'cherry'];
+// console.log('fruits1:');
+// console.log(fruits1);
+// console.log('fruits2:');
+// console.log(fruits2);
 
-// Trynimas
-console.log('Išpjovimas');
-let deletedFruits = fruits2.splice(1, fruits2.length - 1);
-console.log('fruits2(kas liko):');
-console.log(fruits2);
-console.log('deleted fruits(išpjova):');
-console.log(deletedFruits);
+// // Trynimas
+// console.log('Išpjovimas');
+// let deletedFruits = fruits2.splice(1, fruits2.length - 1);
+// console.log('fruits2(kas liko):');
+// console.log(fruits2);
+// console.log('deleted fruits(išpjova):');
+// console.log(deletedFruits);
 
-// Pridėjimas
-console.log('Pridėjimas');
-fruits1.splice(fruits1.length, 0, ...fruits2);
-console.log('fruits1:');
-console.log(fruits1);
+// // Pridėjimas
+// console.log('Pridėjimas');
+// fruits1.splice(fruits1.length, 0, ...fruits2);
+// console.log('fruits1:');
+// console.log(fruits1);
 
-// Sukeitimas
-console.log('Sukeitimas');
-let newFruit = 'pineapple';
-let splicedFruit = fruits1.splice(3, 1, newFruit);
-console.log('fruits1:');
-console.log(fruits1);
-console.log('pakeistas vaisius:');
-console.log(splicedFruit);
-// ---------------------- SPLIT & JOIN -----------------------------
+// // Sukeitimas
+// console.log('Sukeitimas');
+// let newFruit = 'pineapple';
+// let splicedFruit = fruits1.splice(3, 1, newFruit);
+// console.log('fruits1:');
+// console.log(fruits1);
+// console.log('pakeistas vaisius:');
+// console.log(splicedFruit);
+// // ---------------------- SPLIT & JOIN -----------------------------
 
-console.log('Split fruits');
-let result = fruits1.join(', ');
-console.log(window.location.href.split('/'));
+// console.log('Split fruits');
+// let result = fruits1.join(', ');
+// console.log(window.location.href.split('/'));
 
-// -------------------------- SORT --------------------------------
-console.log(fruits1.sort().reverse());
+// // -------------------------- SORT --------------------------------
+// console.log(fruits1.sort().reverse());
 
-let arr = [{
-    name: 'Suzy',
-    age: 18
-  },
-  {
-    name: 'Piotr',
-    age: 555
-  },
-  {
-    name: 'Zandala',
-    age: 6
+// let arr = [{
+//     name: 'Suzy',
+//     age: 18
+//   },
+//   {
+//     name: 'Piotr',
+//     age: 555
+//   },
+//   {
+//     name: 'Zandala',
+//     age: 6
+//   }
+// ];
+
+// // Palyginimo funkcijos
+// function sortByName(a, b){
+//   if(a.name > b.name) return 1;  // 'a' prioritetas didesnis
+//   if(a.name < b.name) return -7; // 'a' prioritetas mazesnis
+//   return 0; // prioritetas lygūs
+// }
+
+// function sortByAge(a, b){
+//   return a.age - b.age;
+// }
+// let sortedByName = arr.sort(sortByName).slice();
+// let sortedByAge = arr.sort(sortByAge).slice();
+
+// console.log(sortedByName);
+// console.log(sortedByAge);
+
+//-------------------------- CIKLAI -------------------------
+//-------------------PSEUDO KODAS- NEVEIKIA, TIK SUVOKIMUI---
+// do{
+//   // Numetimas 5 prisijungimo formą
+//   if(kritineSalyga){
+//     break;
+//   }
+// }while(neiteisingasPrisijungimas)
+// // ----------------------- FUNKCIJOS -----------------------
+ 
+// Čia yra tik funkcijos aprašas - receptas, arba komandų rinkinys
+function pavadinimasAtspindintisVeiksmus(ieinamojoParametroKopija1, ieinamojoParametroKopija2){
+  // Vykdymo blokas
+  return 'Grąžinu šį kintamajį ten, kur buvo iškviesta funkcija - \'pavadinimas()\'';
+  // Grąžinimas  nėra būtinas
+}
+
+function sumElements(masyvas){
+  let sum = 0;
+  for (let i = 0; i < masyvas.length; i++) {
+    sum += masyvas[i];
   }
-];
-
-// Palyginimo funkcijos
-function sortByName(a, b){
-  if(a.name > b.name) return 1;  // 'a' prioritetas didesnis
-  if(a.name < b.name) return -7; // 'a' prioritetas mazesnis
-  return 0; // prioritetas lygūs
+  return sum;
 }
 
-function sortByAge(a, b){
-  return a.age - b.age;
-}
-let sortedByName = arr.sort(sortByName).slice();
-let sortedByAge = arr.sort(sortByAge).slice();
+let arr1 = [1, 3684, 87, 4];
+let arr2 = [1, 36844, 8, -7, 4];
 
-console.log(sortedByName);
-console.log(sortedByAge);
+console.log(sumElements(arr1));
+console.log(sumElements(arr2));
+
 
 
 
@@ -150,7 +182,7 @@ console.log(sortedByAge);
 
 
 // Jums to nereikia, kol kas. Bet gal ir nereiks niekad.
-// --------------------
+// -------------------- Rekursija ------------------
 // function faktorial(x) {
 //   if (x === 1) return 1;
 //   return faktorial(x - 1) * x;
