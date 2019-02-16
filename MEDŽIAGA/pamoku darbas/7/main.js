@@ -61,7 +61,7 @@ console.log(fruits2);
 
 // Trynimas
 console.log('Išpjovimas');
-let deletedFruits = fruits2.splice(1, fruits2.length-1);
+let deletedFruits = fruits2.splice(1, fruits2.length - 1);
 console.log('fruits2(kas liko):');
 console.log(fruits2);
 console.log('deleted fruits(išpjova):');
@@ -83,3 +83,48 @@ console.log('pakeistas vaisius:');
 console.log(splicedFruit);
 // ---------------------- SPLIT & JOIN -----------------------------
 
+console.log('Split fruits');
+let result = fruits1.join(', ');
+console.log(window.location.href.split('/'));
+
+// -------------------------- SORT --------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Jums to nereikia, kol kas. Bet gal ir nereiks niekad.
+// --------------------
+// function faktorial(x) {
+//   if (x === 1) return 1;
+//   return faktorial(x - 1) * x;
+// }
+//  console.log(faktorial(5));
+//  console.log(faktorial(1));
+//  console.log(faktorial(150));
