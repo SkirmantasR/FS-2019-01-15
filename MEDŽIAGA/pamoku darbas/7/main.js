@@ -88,7 +88,37 @@ let result = fruits1.join(', ');
 console.log(window.location.href.split('/'));
 
 // -------------------------- SORT --------------------------------
+console.log(fruits1.sort().reverse());
 
+let arr = [{
+    name: 'Suzy',
+    age: 18
+  },
+  {
+    name: 'Piotr',
+    age: 555
+  },
+  {
+    name: 'Zandala',
+    age: 6
+  }
+];
+
+// Palyginimo funkcijos
+function sortByName(a, b){
+  if(a.name > b.name) return 1;  // 'a' prioritetas didesnis
+  if(a.name < b.name) return -7; // 'a' prioritetas mazesnis
+  return 0; // prioritetas lygūs
+}
+
+function sortByAge(a, b){
+  return a.age - b.age;
+}
+let sortedByName = arr.sort(sortByName).slice();
+let sortedByAge = arr.sort(sortByAge).slice();
+
+console.log(sortedByName);
+console.log(sortedByAge);
 
 
 
