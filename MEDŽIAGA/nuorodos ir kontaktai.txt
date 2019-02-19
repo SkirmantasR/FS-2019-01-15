@@ -21,6 +21,8 @@ Front end:
   
   Javascript:
     JS crash course:            https://www.youtube.com/watch?v=vEROU2XtPR8&t=626sZNo7MFNFg
+    JS use strict:              https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+    JS iteraciniai metodai      https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
 
   Puslapio kūrimui naudingos nuroodos:
     Background paterns:         https://www.heropatterns.com/
@@ -59,6 +61,10 @@ Front end:
     Scroll animacijos:
       https://alvarotrigo.com/multiScroll/?fbclid=IwAR14jaF30m5BBN-dkkQAxLjjAnetesOJTSzmHRw1zd0FvBxdtmaOeG5b7Vc#second
 
+
+Bendros nuorodos:
+  Kalbų ir jų funkcijų nuoruodų puslapis:         http://overapi.com/regex
+  Nuotraukų karpymo (turint serverį) biblioteka: 
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
   Naršyklė su kuria dirbsime:   https://www.google.com/chrome/

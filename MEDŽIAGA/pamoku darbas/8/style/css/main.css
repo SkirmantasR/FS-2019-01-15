@@ -1,0 +1,22 @@
+.gallery-container{
+  border: 2px solid blue;
+  height: 700px;
+  padding-bottom: 20px;
+  overflow: auto;
+}
+
+.img-container{
+  height: 320px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.image{
+  background-size: cover;
+  background-position: center;
+  background-position: center;
+  margin: 20px;
+  width: calc(100% - 40px);
+  height: 100%;
+  border: 2px solid red;
+}
