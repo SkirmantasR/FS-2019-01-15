@@ -1,17 +1,43 @@
-.gallery-container{
+.js-square-container{
+  border: 2px solid purple;
+  padding: 10px;
+}
+
+.square {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+
+.bg-blue {
+  background-color: #00f;
+}
+
+.bg-red {
+  background-color: #f00;
+}
+
+.bg-green {
+  background-color: #0f0;
+}
+
+
+
+/* Nuotraukų įkėlimo pavyzdžio klasės ---------- */
+.gallery-container {
   border: 2px solid blue;
   height: 700px;
   padding-bottom: 20px;
   overflow: auto;
 }
 
-.img-container{
+.img-container {
   height: 320px;
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.image{
+.image {
   background-size: cover;
   background-position: center;
   background-position: center;
@@ -20,3 +46,5 @@
   height: 100%;
   border: 2px solid red;
 }
+
+/* ----------------------------------------------- */
