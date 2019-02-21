@@ -44,6 +44,12 @@ function render() {
       btnDelete.innerHTML = 'Delete';
 
       btnUpdate.addEventListener('click', () => {
+        let inputs = document.querySelectorAll('#saveCar [name]');
+        inputs[0].value = el.brand;
+        inputs[1].value = el.model;
+        inputs[2].value = el.year;
+        inputs[3].value = el.engineVolume;
+        $('#updateCar').modal('show');
         console.log('Atnaujinta mašina su id:', el.id)
       });
 
