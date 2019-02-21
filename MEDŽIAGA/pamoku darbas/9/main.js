@@ -50,7 +50,11 @@ function render() {
         inputs[2].value = el.year;
         inputs[3].value = el.engineVolume;
         $('#updateCar').modal('show');
-        console.log('Atnaujinta mašina su id:', el.id)
+        document.querySelector('#updateCar .btn-warning').addEventListener('click', () => {
+          saveCar(el.id, inputs);
+          render();
+          $('#updateCar').modal('hide');
+        })
       });
 
       btnDelete.addEventListener('click', () => {
@@ -71,6 +75,17 @@ function render() {
 
 function deleteCar(id) {
   cars = cars.filter(el => el.id != id);
+}
+
+function saveCar(id, inputs) {
+  cars.forEach(el => {
+    if (id == el.id) {
+      el.brand = inputs[0].value;
+      el.model = inputs[1].value;
+      el.year = inputs[2].value;
+      el.engineVolume = inputs[3].value;
+    }
+  })
 }
 
 carTable.innerHTML += carTableHeader;
