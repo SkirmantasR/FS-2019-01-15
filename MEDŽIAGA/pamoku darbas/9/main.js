@@ -6,6 +6,7 @@ noDataHeader.className = 'text-danger text-center d-none';
 noDataHeader.innerHTML = 'Nėra duomenų';
 let carTable = document.createElement('table');
 carTable.className = 'table';
+let saveBtn = document.querySelector('#updateCar .btn-warning');
 let carTableHeader = `
 <thead class="thead-dark">
   <tr>
@@ -50,14 +51,12 @@ function render() {
         inputs[2].value = el.year;
         inputs[3].value = el.engineVolume;
         $('#updateCar').modal('show');
-        document.querySelector('#updateCar .btn-warning').addEventListener('click', () => {
-          saveCar(el.id, inputs);
-          render();
-          $('#updateCar').modal('hide');
-        })
+        saveBtn.addEventListener('click', saveChanges);
+        saveBtn.elId = el.id;
+        saveBtn.inputs = inputs;
       });
 
-      btnDelete.addEventListener('click', () => {
+      btnDelete.addEventListener('click', () => { 
         deleteCar(el.id);
         render();
       });
@@ -75,6 +74,13 @@ function render() {
 
 function deleteCar(id) {
   cars = cars.filter(el => el.id != id);
+}
+
+function saveChanges(event){
+  console.dir(event.target);
+  saveCar(event.target.elId, event.target.inputs);
+  render();
+  $('#updateCar').modal('hide');
 }
 
 function saveCar(id, inputs) {
