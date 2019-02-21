@@ -16,6 +16,44 @@
 
     <div class="js-cars-container"></div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="updateCar">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Car</h5>
+            <button type="button" class="close" data-dismiss="modal"> <span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form id="saveCar">
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <label for="save-brand">Brand</label>
+                  <input type="text" class="form-control" id="save-brand" name="brand">
+                </div>
+                <div class="form-group col-12">
+                  <label for="save-model">Model</label>
+                  <input type="text" class="form-control" id="save-model" name="model">
+                </div>
+                <div class="form-group col-12">
+                  <label for="save-year">Year</label>
+                  <input type="text" class="form-control" id="save-year" name="year">
+                </div>
+                <div class="form-group col-12">
+                  <label for="save-engineVolume">Engine Volume</label>
+                  <input type="text" class="form-control" id="save-engineVolume" name="engineVolume">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
