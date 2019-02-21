@@ -1,6 +1,9 @@
 console.table(cars);
 
 let carContainer = document.querySelector('.js-cars-container');
+let noDataHeader = document.createElement('h1');
+noDataHeader.className = 'text-danger text-center d-none';
+noDataHeader.innerHTML = 'Nėra duomenų';
 let carTable = document.createElement('table');
 carTable.className = 'table';
 let carTableHeader = `
@@ -17,55 +20,58 @@ let tbody = document.createElement('tbody');
 
 function render() {
   tbody.innerHTML = '';
-  cars.forEach(el => {
-    let row = document.createElement('tr');
-    row.setAttribute('car-id', el.id);
-    row.innerHTML = `
-    <td>${el.brand}</td>  
-    <td>${el.model}</td>  
-    <td>${el.year}</td>  
-    <td>${el.engineVolume}</td>`;
+  if (cars.length !== 0) {
+    carTable.className = 'table';
+    noDataHeader.className = 'text-danger text-center d-none';
+    cars.forEach(el => {
+      let row = document.createElement('tr');
+      row.setAttribute('car-id', el.id);
+      row.innerHTML = `
+      <td>${el.brand}</td>  
+      <td>${el.model}</td>  
+      <td>${el.year}</td>  
+      <td>${el.engineVolume}</td>`;
 
-    let btnContainer = document.createElement('td');
-    btnContainer.className = 'd-flex justify-content-between';
+      let btnContainer = document.createElement('td');
+      btnContainer.className = 'd-flex justify-content-between';
 
-    let btnUpdate = document.createElement('button');
-    btnUpdate.className = 'btn btn-warning';
-    btnUpdate.innerHTML = 'Update';
+      let btnUpdate = document.createElement('button');
+      btnUpdate.className = 'btn btn-warning';
+      btnUpdate.innerHTML = 'Update';
 
-    let btnDelete = document.createElement('button');
-    btnDelete.className = 'btn btn-danger';
-    btnDelete.innerHTML = 'Delete';
+      let btnDelete = document.createElement('button');
+      btnDelete.className = 'btn btn-danger';
+      btnDelete.innerHTML = 'Delete';
 
-    btnUpdate.addEventListener('click', () => {
-      console.log('Atnaujinta mašina su id:', el.id)
+      btnUpdate.addEventListener('click', () => {
+        console.log('Atnaujinta mašina su id:', el.id)
+      });
+
+      btnDelete.addEventListener('click', () => {
+        deleteCar(el.id);
+        render();
+      });
+
+      btnContainer.appendChild(btnUpdate);
+      btnContainer.appendChild(btnDelete);
+      row.appendChild(btnContainer);
+      tbody.appendChild(row);
     });
-
-    btnDelete.addEventListener('click', () => {
-      deleteCar(el.id);
-      render();
-    });
-
-    btnContainer.appendChild(btnUpdate);
-    btnContainer.appendChild(btnDelete);
-    row.appendChild(btnContainer);
-    tbody.appendChild(row);
-  });
+  } else {
+    noDataHeader.classList.remove('d-none');
+    carTable.classList.add('d-none');
+  }
 }
 
 function deleteCar(id) {
-  for (let i = 0; i < cars.length; i++) {
-    if (id == cars[i].id) {
-      cars.splice(i, 1);
-      break;
-    }
-  }
+  cars = cars.filter(el => el.id != id);
 }
 
 carTable.innerHTML += carTableHeader;
 
 // elementų įdėjimas į DOM - pačioje pabaigoje
 carTable.appendChild(tbody);
+carContainer.appendChild(noDataHeader);
 carContainer.appendChild(carTable);
 
 render();
