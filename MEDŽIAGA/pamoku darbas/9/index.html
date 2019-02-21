@@ -14,6 +14,30 @@
 <body>
   <div class="container">
 
+
+    <form id="addCar" class="border border-success rounded my-3 p-3">
+      <h3 class="text-sucess text-center">Add car</h3>
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="brand">Brand</label>
+          <input type="text" class="form-control" id="brand" name="brand">
+        </div>
+        <div class="form-group col">
+          <label for="model">Model</label>
+          <input type="text" class="form-control" id="model" name="model">
+        </div>
+        <div class="form-group col">
+          <label for="year">Year</label>
+          <input type="text" class="form-control" id="year" name="year">
+        </div>
+        <div class="form-group col">
+          <label for="engineVolume">Engine Volume</label>
+          <input type="text" class="form-control" id="engineVolume" name="engineVolume">
+        </div>
+      </div>
+      <input type="submit" class="btn btn-success d-block mx-auto" value="Add car">
+    </form>
+
     <div class="js-cars-container"></div>
 
     <!-- Modal -->
