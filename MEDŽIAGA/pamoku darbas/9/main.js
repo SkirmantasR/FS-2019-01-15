@@ -1,5 +1,7 @@
 console.table(cars);
 
+let maxId = cars.length;
+
 let carContainer = document.querySelector('.js-cars-container');
 let noDataHeader = document.createElement('h1');
 noDataHeader.className = 'text-danger text-center d-none';
@@ -56,7 +58,7 @@ function render() {
         saveBtn.inputs = inputs;
       });
 
-      btnDelete.addEventListener('click', () => { 
+      btnDelete.addEventListener('click', () => {
         deleteCar(el.id);
         render();
       });
@@ -76,7 +78,7 @@ function deleteCar(id) {
   cars = cars.filter(el => el.id != id);
 }
 
-function saveChanges(event){
+function saveChanges(event) {
   console.dir(event.target);
   saveCar(event.target.elId, event.target.inputs);
   render();
@@ -93,14 +95,32 @@ function saveCar(id, inputs) {
     }
   })
 }
-
 carTable.innerHTML += carTableHeader;
+
+let formAddCar = document.querySelector('#addCar');
+formAddCar.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let data = {
+    id: maxId++,
+    brand: e.target.brand.value,
+    model: e.target.model.value,
+    year: e.target.year.value,
+    engineVolume: e.target.engineVolume.value,
+  }
+  // Vieta duomenų patikrinimui ir saugumui užtikrinti
+  cars.push(data);
+  e.target.querySelectorAll('[name]').forEach(el => el.value = '');
+  render();
+})
+
+
+
+// Vykdymo vieta --------------------------------------
 
 // elementų įdėjimas į DOM - pačioje pabaigoje
 carTable.appendChild(tbody);
 carContainer.appendChild(noDataHeader);
 carContainer.appendChild(carTable);
-
 render();
 
 
