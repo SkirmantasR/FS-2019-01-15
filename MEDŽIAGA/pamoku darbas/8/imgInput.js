@@ -3,6 +3,7 @@ let galleryContainer = document.querySelector('.gallery-container');
 imgInput.addEventListener('change', (e) => {
   let input = e.target;
   let files = input.files;
+  console.log(files);
 
   // FileReader objekto palaikymas
   if (FileReader && files && files.length) {
