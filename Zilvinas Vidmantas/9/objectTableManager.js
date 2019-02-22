@@ -3,64 +3,65 @@ console.table(cars);
 
 // Įeinamieji parametrai
 /**
- * Prototipas įgalinti duomenų atvaizdavimui, trinimui ir redagavimui, panaudojant bootstrap lentelę
- * @param {*Array} data - Objektų masyvas su savybe id
+ * Prototipas įgalinti duomenų atvaizdavimui, trinimui ir redagavimui, panaudojant Bootstrap lentelę
+ * @param {*String} tableName - Lentelės pavadinimas
+ * @param {*Array} data - Objektų masyvas, su savybe id
  * @param {*HTMLElement} container - mazgas, turiniui talpinti
  */
-function ObjectTableManager(data, container) {
-  // Veiksmai vykdomi vieną kartą, sukuriant objektą su žodeliu 'new'
+function ObjectTableManager(tableName, data, container) {
+  let propNames = Object.getOwnPropertyNames(data[0]).filter(el => el != 'id');
   // Privatūs kintamieji
+  let tableTitle = '<h1 class="text-dark text-center">' + tableName + '</h1>';
   let table = document.createElement('table');
   let tableHeader = formatHeader();
   let tbody = document.createElement('tbody');
   table.className = 'table';
   table.innerHTML += tableHeader;
   table.appendChild(tbody);
+  container.innerHTML += tableTitle;
   container.appendChild(table);
 
 
   // Formatuojama lentelės antraštė
   function formatHeader() {
     let result = '<thead class="thead-dark"><tr>';
-    let obProps = Object.getOwnPropertyNames(data[0]); // raktų masyvas - [ 'id', 'key1', key2, ..., 'keyn']
-    obProps.forEach((el) => {
-      if (el != 'id') {
-        let keyName = el;
-        // Ieškoma didžiųjų raidžių
-        keyName = keyName.charAt(0).toUpperCase() + keyName.slice(1); // Pirmają parašome didžiają
-        for (let i = 1; i < keyName.length; i++) { // Pradedame ieškori nuo antros raidės
-          if (keyName[i] == keyName[i].toUpperCase()) { // Jeigu didžioji
-            keyName = keyName.slice(0, i) + keyName.charAt(i).toLowerCase() + keyName.slice(i + 1); // Paverčiame  mažąja
-            keyName = keyName.slice(0, i) + ' ' + keyName.slice(i++); // įterpiamas tarpas
-          }
-        }
-        result += '<td>' + keyName + '</td>';
-      }
-    });
-    return result + '</tr></thead>';
+    propNames.forEach(el => result += '<th>' + camelToHeader(el) + '</th>');
+    return result + '<th></th><th></th></tr></thead>';
   }
+
+  function camelToHeader(camelCase) {
+    camelCase = camelCase.charAt(0).toUpperCase() + camelCase.slice(1); // Pirmają parašome didžiają
+    for (let i = 1; i < camelCase.length; i++) { // Pradedame ieškoti nuo antros raidės (nes pirma turi būt didžioji)
+      if (camelCase[i] == camelCase[i].toUpperCase()) { // Jeigu didžioji
+        camelCase = camelCase.slice(0, i) + camelCase.charAt(i).toLowerCase() + camelCase.slice(i + 1); // Paverčiame  mažąja
+        camelCase = camelCase.slice(0, i) + ' ' + camelCase.slice(i++); // įterpiamas tarpas
+      }
+    }
+    return camelCase;
+  }
+
 
   this.render = () => {
     tbody.innerHTML = '';
     data.forEach(el => {
       let row = document.createElement('tr');
-      row.setAttribute('car-id', el.id);
-      row.innerHTML = `
-      <td>${el.brand}</td>  
-      <td>${el.model}</td>  
-      <td>${el.year}</td>  
-      <td>${el.engineVolume}</td>`;
+      propNames.forEach(prop => row.innerHTML += '<td>' + el[prop] + '</td>');
+
 
       let btnContainer = document.createElement('td');
       btnContainer.className = 'd-flex justify-content-between';
 
       let btnUpdate = document.createElement('button');
       btnUpdate.className = 'btn btn-warning';
-      btnUpdate.innerHTML = 'Update';
+      btnUpdate.innerHTML = `
+        <span class="d-none d-md-inline">Update</span>
+        <span class="d-inline d-md-none">&#8796;</span>`;
 
       let btnDelete = document.createElement('button');
       btnDelete.className = 'btn btn-danger';
-      btnDelete.innerHTML = 'Delete';
+      btnDelete.innerHTML = `
+      <span class="d-none d-md-inline">Delete</span>
+      <span class="d-inline d-md-none">&#x2715;</span>`;
 
       btnUpdate.addEventListener('click', () => {
         let rowDataTags = Array.prototype.slice.call(row.children);
@@ -85,12 +86,12 @@ function ObjectTableManager(data, container) {
   }
 
   function setEditable(id, editableTags) {
-    editableTags.forEach(el=>{
-      // baigiau čia -------------------------------------------------------------------------
+    editableTags.forEach(el => {
+
     })
   }
 }
 
 let carContainer = document.querySelector('.js-cars-container');
-let carManager = new ObjectTableManager(cars, carContainer); // Duomenys ir konteineris
+let carManager = new ObjectTableManager('Car manager', cars, carContainer); // Duomenys ir konteineris
 carManager.render();
