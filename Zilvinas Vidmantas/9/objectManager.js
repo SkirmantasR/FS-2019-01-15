@@ -1,5 +1,3 @@
-console.table(cars);
-
 // Įeinamieji parametrai
 /**
  * Prototipas įgalinti duomenų atvaizdavimui, trinimui ir redagavimui, panaudojant Bootstrap lentelę
@@ -12,42 +10,43 @@ function ObjectManager(tableName, data, container) {
   let tableTitle = document.createElement('h1');
   let tableHeader = formatHeader();
   let formCreate = formatFormCreate();
+  let tableContainer = document.createElement('div');
   let table = document.createElement('table');
   let tbody = document.createElement('tbody');
   let objectBeingEdited = false;
   let maxId = data.length;
 
-  addSubmitHandler(formCreate);
-
   tableTitle.innerHTML = tableName;
   tableTitle.className = 'text-dark text-center';
-  table.className = "table table-striped";
+  table.className = "table table-striped text-center";
   table.innerHTML += tableHeader;
   table.appendChild(tbody);
 
+  tableContainer.appendChild(table);
+
   container.appendChild(tableTitle);
   container.appendChild(formCreate);
-  container.appendChild(table);
-
+  container.appendChild(tableContainer);
   container.className = "border border-dark rounded p-3 my-3 manager-panel";
-
   render();
+  watchWindow();
 
   function formatFormCreate() {
     let form = document.createElement('form');
-    form.className = 'my-3 p-3';
+    form.className = 'mt-3 p-3';
     let formContent = `
     <h3 class="text-sucess">Create Object</h3>
     <div class="form-row">`;
     propNames.forEach(el => {
       formContent += `
-      <div class="form-group col">
+      <div class="form-group col-12 col-md">
         <label for="${el}">${camelToTitle(el)}</label>
         <input type="text" class="form-control" id="${el}" name="${el}">
       </div>`;
     });
     formContent += `</div><input type="submit" class="btn btn-success d-block mx-auto" value="Add object">`;
     form.innerHTML = formContent;
+    addSubmitHandler(form);
     return form;
   }
 
@@ -81,6 +80,54 @@ function ObjectManager(tableName, data, container) {
     return camelCase;
   }
 
+
+  function setEditable(btnUpdate, id, editableTags) {
+    objectBeingEdited = true;
+    editableTags.forEach((el, i) => {
+      el.setAttribute("contenteditable", "true");
+      el.classList.add("editable");
+      if (i != editableTags.length - 1)
+        el.style.borderRight = "solid 1px #6c92b8";
+    });
+    let btnSave = document.createElement("button");
+    btnSave.className = "btn btn-success btn-crud mr-2";
+    btnSave.innerHTML = `
+    <span class="d-none d-md-inline">Save</span>
+    <span class="d-inline d-md-none">&#x2713;</span>`;
+    btnUpdate.parentNode.insertBefore(btnSave, btnUpdate);
+    btnUpdate.remove();
+    btnSave.addEventListener("click", () => {
+      objectBeingEdited = false;
+      let values = editableTags.map(el => el.innerHTML);
+      let formedObject = formObject(id, values);
+      updateObject(formedObject);
+      render();
+    });
+  }
+
+  function deleteObject(id) {
+    data = data.filter(el => el.id != id);
+  }
+
+  function saveObject(object) {
+    data.push(object);
+  }
+
+  function updateObject(object) {
+    data = data.map(ob => {
+      if (object.id == ob.id) return object;
+      return ob;
+    });
+  }
+
+  function formObject(id, array) {
+    let object = {
+      id
+    };
+    array.forEach((el, i) => object[propNames[i]] = el);
+    return object;
+  }
+
   function render() {
     tbody.innerHTML = '';
     data.forEach(el => {
@@ -91,7 +138,7 @@ function ObjectManager(tableName, data, container) {
       btnContainer.className = "d-flex justify-content-between";
 
       let btnUpdate = document.createElement("button");
-      btnUpdate.className = "btn btn-warning btn-crud";
+      btnUpdate.className = "btn btn-warning btn-crud mr-2";
       btnUpdate.innerHTML = `
       <span class="d-none d-md-inline">Update</span>
       <span class="d-inline d-md-none">&#8796;</span>`;
@@ -128,53 +175,21 @@ function ObjectManager(tableName, data, container) {
     });
   }
 
-  function setEditable(btnUpdate, id, editableTags) {
-    objectBeingEdited = true;
-    editableTags.forEach((el, i) => {
-      el.setAttribute("contenteditable", "true");
-      el.classList.add("editable");
-      if (i != editableTags.length - 1)
-        el.style.borderRight = "solid 1px #6c92b8";
-    });
-    let btnSave = document.createElement("button");
-    btnSave.className = "btn btn-success btn-crud";
-    btnSave.innerHTML = `
-    <span class="d-none d-md-inline">Save</span>
-    <span class="d-inline d-md-none">&#x2713;</span>`;
-    btnUpdate.parentNode.insertBefore(btnSave, btnUpdate);
-    btnUpdate.remove();
-    btnSave.addEventListener("click", () => {
-      objectBeingEdited = false;
-      let values = editableTags.map(el => el.innerHTML);
-      let formedObject = formObject(id, values);
-      updateObject(formedObject);
-      render();
+  function watchWindow() {
+    testSizes();
+    let pastValue = container.offsetWidth;
+    window.addEventListener('resize', () => {
+      if (pastValue != container.offsetWidth) {
+        pastValue = container.offsetWidth;
+        testSizes(pastValue);
+      }
     });
   }
 
-  function deleteObject(id) {
-    data = data.filter(el => el.id != id);
-  }
-
-  function saveObject(object){
-    data.push(object);
-  }
-
-  function updateObject(object) {
-    data = data.map(ob => {
-      if (object.id == ob.id) return object;
-      return ob;
-    });
-  }
-
-  function formObject(id, array) {
-    let object = {
-      id
-    };
-    array.forEach((el, i) => object[propNames[i]] = el);
-    return object;
+  function testSizes() {
+    tableContainer.className = '';
+    if (table.offsetWidth > container.offsetWidth) {
+      tableContainer.className = 'table-responsive';
+    }
   }
 }
-
-let carContainer = document.querySelector(".js-cars-container");
-let carManager = new ObjectManager("Car manager", cars, carContainer);
