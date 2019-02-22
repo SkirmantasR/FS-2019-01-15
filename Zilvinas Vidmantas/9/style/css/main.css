@@ -1,0 +1,10 @@
+.editable{
+  background: #a9b8c7;
+}
+
+tr>.v-middle{
+  vertical-align: middle;
+}
+.btn-crud{
+  width: 80px;
+}
