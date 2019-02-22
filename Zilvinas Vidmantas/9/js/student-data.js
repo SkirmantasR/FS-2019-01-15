@@ -42,7 +42,7 @@ let students = [{
     id: 5,
     name: 'Monitorius',
     surname: 'Audeklas',
-    course: 2000,
+    course: 2,
     discipline: 'Multimedijos technologijos',
     mentor: 'Multis Medis'
   },
