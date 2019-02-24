@@ -1,4 +1,4 @@
-Interneto veikimas:
+﻿Interneto veikimas:
   hosting:                      https://www.youtube.com/watch?v=MaW5MNx8l9E
   Domain name server:           https://www.youtube.com/watch?v=72snZctFFtA&t=243s
 
@@ -64,7 +64,6 @@ Front end:
 
 Bendros nuorodos:
   Kalbų ir jų funkcijų nuoruodų puslapis:         http://overapi.com/regex
-  Nuotraukų karpymo (turint serverį) biblioteka: 
 Programinė įranga:
   Nemokamas teksto redaktorius: https://code.visualstudio.com/
   Naršyklė su kuria dirbsime:   https://www.google.com/chrome/
@@ -76,7 +75,6 @@ Reikia turėti
       Mob. nr:    865897526 
       El. paštas: Vaidotasbabkaitis@gmail.com
       Vaidotas Babkaitis. Paminėkit, kad nuo Žilvino
-
 
 Paaiškinimai:
   *|| - Arba operatorius
