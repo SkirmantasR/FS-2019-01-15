@@ -1,0 +1,14 @@
+.manager-panel{
+  box-shadow: 2px 2px 6px  #000;
+}
+.editable {
+  background: #a9b8c7;
+}
+
+tr>.v-middle {
+  vertical-align: middle;
+}
+
+.btn-crud {
+  width: 80px;
+}
