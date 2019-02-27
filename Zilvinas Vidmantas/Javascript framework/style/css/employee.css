@@ -1,0 +1,26 @@
+.employee-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee {
+  width: 290px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow:
+    2px 2px 2px #000,
+    1px 1px 6px #000;
+}
+
+.prop-name {
+  display: inline-block;
+}
+
+.prop-name::after {
+  content: ': ';
+}
+
+.prop-name+span {
+  font-weight: 700;
+}
