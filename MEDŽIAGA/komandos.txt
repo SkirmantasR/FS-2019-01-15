@@ -3,6 +3,7 @@
     CTRL + X                        - Iškirpti
     CTRL + V                        - Įklijuoti
     CTRL + Z                        - Grąžint atgal
+    CTRL + A                        - Pažymi viską
     CTRL + S                        - Išsaugoti
     ALT  + TAB                      - Pakeičia langą
     F11                             - Išdidina ekraną
@@ -17,3 +18,6 @@ VISUAL STUDIO CODE KOMANDOS -----------------------------------------------
     ALT + SHIFT + F                 - automatiškai suformatuoja tekstą
     ALT + arrow (up || down)        - eilutės perstumimas (viršun || žemyn)
     CTRL + K (atleisti viską) + S   - išsaugo VISUS failus
+    DIBARNT SU PHP ĮSKIEPIAIS       - CTRL + SHIFT + X
+        ALT + SHIFT + F             - automatiškai suformatuoja PHP
+        ALT + CTRL + F              - automatiškai suformatuoja HTML
