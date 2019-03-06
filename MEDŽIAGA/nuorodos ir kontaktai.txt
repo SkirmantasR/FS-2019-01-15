@@ -36,6 +36,13 @@ Front end:
       https://fontawesome.com/?from=io
       https://www.s-ings.com/typicons/
 
+    Nuotraukų galerija:
+      https://unsplash.com/
+      https://www.pexels.com/
+      https://www.freepik.com/
+      https://www.everypixel.com/
+      https://pixabay.com/
+
     Puslapio spalvų paletės kūrimui:
       http://colrd.com/@/thisisthejellyfish/
       https://color.adobe.com/create/color-wheel/
@@ -53,6 +60,8 @@ Front end:
       http://styleboost.com/
       https://www.siteinspire.com/  
       https://www.admiretheweb.com/blog/
+      http://www.webdesigndev.com/20-luxury-hotel-and-bb-web-designs/
+      https://www.pinterest.com/pin/98023729365792725/?lp=true
 
     Jeigu galvojate kad jum gerai sekasi ir norite nusivilti, žiūrėti čia:
       http://kenjiendo.com/album/?fbclid=IwAR3IrEbeZy50XLa1cSwYJbH2k9F8SGERmnJ6ej6uXWgw19zs1sUYxjjMM7Y
@@ -63,8 +72,14 @@ Front end:
       https://alvarotrigo.com/multiScroll/?fbclid=IwAR14jaF30m5BBN-dkkQAxLjjAnetesOJTSzmHRw1zd0FvBxdtmaOeG5b7Vc#second
 
 Backend:
-  Serveriavimo įrankis - XAMPP:     https://www.apachefriends.org/index.html
-  PHP crach course playlist:        https://www.youtube.com/watch?v=oJbfyzaA2QA&list=PLillGF-Rfqbap2IB6ZS4BBBcYPagAjpjn
+  Serveriavimo įrankis - XAMPP:                 https://www.apachefriends.org/index.html
+  PHP crach course playlist:                    https://www.youtube.com/watch?v=oJbfyzaA2QA&list=PLillGF-Rfqbap2IB6ZS4BBBcYPagAjpjn
+
+  Objektinis programavimas (OOP) :
+    4 Pagrindinės OOP savybės:                  https://standardofnorms.wordpress.com/2012/09/02/4-pillars-of-object-oriented-programming/   
+    4 OOP savybių teorija:                      https://www.youtube.com/watch?v=HxMw9Cpfb0Y
+    4 OOP savybių įgilinimas praktiškai:        https://www.youtube.com/watch?v=w3XUG6oyINI   
+
 
 Bendros nuorodos:
   Kalbų ir jų funkcijų nuorodų puslapis:         http://overapi.com/regex
