@@ -13,6 +13,7 @@ NARŠYKLĖS KOMANDOS --------------------------------------------------
     F12                             - Programuotojo lango atidarymas
 VISUAL STUDIO CODE KOMANDOS -----------------------------------------------
     CTRL + SPACE                    - Duoda pasirinkimą
+    CTRL + SHIFT + L                - Pasirenka visus sutapimus su pažymėtu tekstu
     CTRL + ALT + (rodyklė)          - daugybinis žymėjimas
     ALT + mouse-click               - Keleto žymeklių kūrimas
     ALT + SHIFT + F                 - automatiškai suformatuoja tekstą
