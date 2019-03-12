@@ -5,14 +5,21 @@ abstract class UniversityMember
   protected $name;
   protected $surname;
   protected $age;
-  private $mailBox;
-  private $modules = [];
+  protected $mailBox;
+  protected $modules = [];
 
   public function __construct($name, $surname, $age)
   {
     $this->name = $name;
     $this->surname = $surname;
     $this->age = $age;
+    $this->mailBox = $this->createMailboxName();
+  }
+
+  protected function createMailboxName(){
+    // logika kuri nuima didžiasias ir lietuviškas raides
+    // logika kuri tikrina, ar universitete jau nėra tokio pašto
+    return $this->name.$this->surname.'@inbox.lt';
   }
 
   // Abtraktus metodas priverčia vaikines klases implementuoti metodą
