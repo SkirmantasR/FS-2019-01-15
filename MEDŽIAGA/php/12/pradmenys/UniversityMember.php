@@ -6,7 +6,7 @@ abstract class UniversityMember
   protected $surname;
   protected $age;
   protected $mailBox;
-  protected $modules = [];
+  protected $modules;
 
   public function __construct($name, $surname, $age)
   {
@@ -14,12 +14,27 @@ abstract class UniversityMember
     $this->surname = $surname;
     $this->age = $age;
     $this->mailBox = $this->createMailboxName();
+    $this->modules = [];
   }
 
-  protected function createMailboxName(){
+  protected function createMailboxName()
+  {
     // logika kuri nuima didžiasias ir lietuviškas raides
     // logika kuri tikrina, ar universitete jau nėra tokio pašto
-    return $this->name.$this->surname.'@inbox.lt';
+    return $this->name . $this->surname . '@inbox.lt';
+  }
+
+  public function addModule(string $title, int $credits) : bool
+  {
+    $allCredits = 0;
+    for ($i = 0; $i < count($this->modules); $i++) {
+      $allCredits += $this->modules[$i]->getCredits();
+    }
+    if ($allCredits + $credits < 30) {
+      array_push($this->modules, new Module($title, $credits));
+      return true;
+    }
+    return false;
   }
 
   // Abtraktus metodas priverčia vaikines klases implementuoti metodą
@@ -56,6 +71,4 @@ abstract class UniversityMember
   {
     $this->age = $age;
   }
-  
-
 }

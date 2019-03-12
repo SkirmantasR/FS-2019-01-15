@@ -35,6 +35,15 @@ class Student extends UniversityMember
   }
 
   public function toRow(){
+    $modulesString = '';
+    foreach ($this->modules as $module) {
+      $modulesString .= '
+        <div>
+          <span style="width: 100px; display: inline-block">'.$module->getTitle().'</span>
+          <span>'.$module->getCredits().'</span>
+        </div>
+      ';
+    }
     $result = "
     <tr>
       <td>{$this->name}</td>
@@ -45,6 +54,7 @@ class Student extends UniversityMember
       <td>{$this->course}</td>
       <td>{$this->average}</td>
       <td>{$this->mailBox}</td>
+      <td>{$modulesString}</td>
     </tr>
     ";
     return $result;
