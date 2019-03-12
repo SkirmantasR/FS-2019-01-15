@@ -27,6 +27,7 @@ class University
           <th>Salary</th>
           <th>Course</th>
           <th>Average</th>
+          <th>Email</th>
         </tr>
       </thead>
       <tbody>';

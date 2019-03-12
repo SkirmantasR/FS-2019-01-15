@@ -44,6 +44,7 @@ class Student extends UniversityMember
       <td>---</td>
       <td>{$this->course}</td>
       <td>{$this->average}</td>
+      <td>{$this->mailBox}</td>
     </tr>
     ";
     return $result;

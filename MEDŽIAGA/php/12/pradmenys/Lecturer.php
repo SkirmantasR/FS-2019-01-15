@@ -44,6 +44,7 @@ class Lecturer extends UniversityMember
       <td>{$this->salary}</td>
       <td>---</td>
       <td>---</td>
+      <td>{$this->mailBox}</td>
     </tr>
     ";
     return $result;
