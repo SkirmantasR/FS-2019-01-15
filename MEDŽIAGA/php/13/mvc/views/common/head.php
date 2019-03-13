@@ -12,7 +12,7 @@
   <?php
   $pathToCss = "style/css/$page.css";
   if (file_exists($pathToCss)) {
-    echo '<link rel="stylesheet" href="' . ROOT . $pathToCss . '">';
+    echo '<link rel="stylesheet" href="' . ROOT . $pathToCss . '">'; 
   }
   ?>
 </head>
