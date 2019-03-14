@@ -1,0 +1,11 @@
+.content{
+  background: url(../img/background.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-brown{
+  background-color: #240f0a;
+  box-shadow: 2px 2px 2px #000;
+}

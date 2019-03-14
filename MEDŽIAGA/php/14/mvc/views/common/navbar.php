@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-sm navbar-dark bg-brown fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="<?php echo ROOT ?>">CodeAcademy</a>
+    <a class="navbar-brand" href="<?php echo ROOT ?>">ReadOnly</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
