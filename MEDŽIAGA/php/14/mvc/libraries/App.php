@@ -6,11 +6,9 @@ class App
 
   public function __construct()
   {
-    if (isset($_GET['url'])) {
-      $page = $_GET['url'];
-    } else {
-      $page = 'home';
-    }
+    $url = isset($_GET['url'])? explode('/', $_GET['url']) : ['home'];
+    $page = $url[0];
+    $method = $url[1] ?? null; // Nustato jei egzistuoja metodas
 
     $this->controller = $this->createController($page);
     $this->controller->index();
