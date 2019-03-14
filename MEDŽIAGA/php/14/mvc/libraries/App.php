@@ -8,10 +8,10 @@ class App
   {
     $url = isset($_GET['url'])? explode('/', $_GET['url']) : ['home'];
     $page = $url[0];
-    $method = $url[1] ?? null; // Nustato jei egzistuoja metodas
+    $method = $url[1] ?? 'index'; // Nustatome metodą
 
     $this->controller = $this->createController($page);
-    $this->controller->index();
+    $this->controller->$method();
   }
 
   private function createController($page)
