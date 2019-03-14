@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-brown">
+<nav class="navbar navbar-expand-sm navbar-dark bg-brown fixed-top">
   <div class="container">
     <a class="navbar-brand" href="<?php echo ROOT ?>">ReadOnly</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
