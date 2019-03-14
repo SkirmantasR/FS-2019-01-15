@@ -35,6 +35,15 @@ class Lecturer extends UniversityMember
   }
   
   public function toRow(){ // Implementacija - realizavimas
+    $modulesString = '';
+    foreach ($this->modules as $module) {
+      $modulesString .= '
+        <div>
+          <span style="width: 100px; display: inline-block">'.$module->getTitle().'</span>
+          <span>'.$module->getCredits().'</span>
+        </div>
+      ';
+    }
     $result = "
     <tr>
       <td>{$this->name}</td>
@@ -45,6 +54,7 @@ class Lecturer extends UniversityMember
       <td>---</td>
       <td>---</td>
       <td>{$this->mailBox}</td>
+      <td>{$modulesString}</td>
     </tr>
     ";
     return $result;

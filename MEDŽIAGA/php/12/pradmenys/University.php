@@ -28,6 +28,7 @@ class University
           <th>Course</th>
           <th>Average</th>
           <th>Email</th>
+          <th>Modules</th>
         </tr>
       </thead>
       <tbody>';

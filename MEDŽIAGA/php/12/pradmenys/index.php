@@ -1,5 +1,6 @@
 <?php
-include 'UniversityMember.php';
+include 'Module.php';
+include 'UniversityMember.php'; 
 include 'University.php';
 include 'Lecturer.php';
 include 'Student.php';
@@ -28,7 +29,15 @@ include 'Student.php';
     $university->addMember($student);
 
     $student->setAge(39);
-      // var_dump($student->name);  Negalima prieiga prie private kintamojo
+    $student->addModule('Pjovininkystė', 6);
+    $student->addModule('Pjovininkyst2', 6);
+    $student->addModule('Pjovininkyst3', 6);
+    $student->addModule('Pjovininkyst4', 6);
+    $student->addModule('Pjovininkyst4', 3);
+    $student->addModule('Pjovininkyst5', 3);
+    
+    $lecturer->addModule('Pjovininkyst5', 3);
+    // var_dump($student->name);  Negalima prieiga prie private kintamojo
       // var_dump($student->getName());
 
       // <pre> - Palieka tarpus ir eilučių nukėlimus kaip HTML/PHP faile
