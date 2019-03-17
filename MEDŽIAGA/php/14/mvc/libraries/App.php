@@ -6,11 +6,13 @@ class App
 
   public function __construct()
   {
-    $url = isset($_GET['url'])? explode('/', $_GET['url']) : ['home'];
+    $url = isset($_GET['url']) ? explode('/', $_GET['url']) : ['home'];
     $page = $url[0];
     $method = $url[1] ?? 'index'; // Nustatome metodą
 
     $this->controller = $this->createController($page);
+    // Patikriname, ar kontroleris turi tokį metodą ↓
+    $method = method_exists($this->controller, $method) ? $method : 'index';
     $this->controller->$method();
   }
 
