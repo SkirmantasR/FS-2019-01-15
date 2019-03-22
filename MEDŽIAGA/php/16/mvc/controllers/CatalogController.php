@@ -7,30 +7,13 @@ class CatalogController extends Controller
     parent::__construct($name);
   }
 
+  public function index(){
+    $this->view->args['books'] = $this->model->getBooks();
+    parent::index();
+  }
+
   public function fantasy()
   {
-    $this->view->args['subpage'] = 'fantasy';
-    $this->view->args['books'] = [
-      [
-        'title' => 'Vienas Du Trys',
-        'author' => 'Skaičiuoklis Kvadratas',
-        'year'=> 2005,
-        'category' => 'fantasy'
-      ],
-      [
-        'title' => 'Sapnų vovierė',
-        'author' => 'Miško magnatas',
-        'year'=> 2012,
-        'category' => 'fantasy'
-      ],
-      [
-        'title' => 'Saulė sustrigo',
-        'author' => 'Sraigė Šliaužytė',
-        'year'=> 2002,
-        'category' => 'fantasy'
-      ],
-    ];
-    $this->index();
   }
 
   public function biography()
