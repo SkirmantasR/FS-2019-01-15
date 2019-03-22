@@ -23,12 +23,7 @@
           <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" role="button">Catalog</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog">All genres</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/fantasy">Fantasy</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/biography">Biography</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/scifi">Science fiction</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/detectives">Detectives</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/poetry">Poetry</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/science">Science</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/novels">Novels</a>
           </div>
         </li>
       </ul>

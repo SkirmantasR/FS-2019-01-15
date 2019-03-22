@@ -12,27 +12,8 @@ class CatalogController extends Controller
     parent::index();
   }
 
-  public function fantasy()
-  {
-  }
-
-  public function biography()
-  {
-  }
-
-  public function scifi()
-  {
-  }
-
-  public function detectives()
-  {
-  }
-
-  public function poetry()
-  {
-  }
-
-  public function science()
-  {
+  public function novels(){
+    $this->view->args['books'] = $this->model->getBooks('Novel');
+    parent::index();
   }
 }

@@ -18,7 +18,10 @@
     inset -2px 0 6px #000;
 }
 
+nav{
+  box-shadow: 2px 2px 2px #000;
+}
+
 .bg-brown{
   background-color: #240f0a;
-  box-shadow: 2px 2px 2px #000;
 }

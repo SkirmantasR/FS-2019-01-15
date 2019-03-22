@@ -1,6 +1,29 @@
 <?php
 if (count($this->args['books']) > 0) {
-  echo '<h3>Someday I will be Table of books TT-TT</h3>';
-} else {
-  echo '<h3>Sorry, no fantasy books :(</h3>';
+?>
+<table class="table table-striped">
+  <thead class="bg-brown">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Year</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+  <tbody>
+<?php
+    foreach ($this->args['books'] as $bookArray) {
+?>
+    <tr>
+      <td><?php echo $bookArray['title'] ?></td>
+      <td><?php echo $bookArray['author'] ?></td>
+      <td><?php echo $bookArray['year'] ?></td>
+      <td><?php echo $bookArray['genre'] ?></td>
+    </tr>
+<?php 
+    } 
+?>
+  </tbody>
+</table>
+<?php
 }
