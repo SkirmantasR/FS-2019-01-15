@@ -11,12 +11,6 @@
           <a class="nav-link" href="<?php echo ROOT ?>home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>gallery">Gallery</a>
         </li>
         <li class="nav-item dropdown">
@@ -24,7 +18,18 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog">All genres</a>
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog/novels">Novels</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/adventure">Adventure</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/war">War</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/instructional">Instructional</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/stories">Stories</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/politics">Politics</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>reader">Readers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
         </li>
       </ul>
     </div>

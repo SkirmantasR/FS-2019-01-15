@@ -6,22 +6,28 @@
 }
 
 .content>.container{
-  background: #ffffffd2;
+  background: #ffffffe1;
   padding-top: 56px;
   height: 100vh;
   box-shadow: 
-    2px 0 2px #000,
+    1px 0 1px #000,
     inset 1px 0 1px #000,
-    inset 2px 0 6px #000,
-    -2px 0 2px #000,
+    inset 1px 0 3px #000,
+    -1px 0 2px #000,
     inset -1px 0 1px #000,
-    inset -2px 0 6px #000;
+    inset -1px 0 3px #000;
 }
 
 nav{
-  box-shadow: 2px 2px 2px #000;
+  box-shadow: 2px 2px 1px #000;
 }
 
 .bg-brown{
   background-color: #240f0a;
+}
+
+h1{
+  color: #240f0a;
+  text-shadow: 1px 1px 1px;
+  margin: 20px 0;
 }
