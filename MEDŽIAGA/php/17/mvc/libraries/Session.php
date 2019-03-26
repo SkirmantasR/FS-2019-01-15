@@ -26,7 +26,7 @@ class Session
   public static function redirectToLogin()
   {
     Session::destroy();
-    header('Location: ' . URL . 'login');
+    header('Location: ' . ROOT . 'login');
     exit();
   }
 }
