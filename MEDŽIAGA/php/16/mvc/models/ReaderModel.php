@@ -1,15 +1,15 @@
 <?php 
 
-class CatalogModel extends Model
+class ReaderModel extends Model
 {
   public function __construct()
   {
     parent::__construct();
   }
 
-  public function getBooks()
+  public function getReaders()
   {
-    $query = 'SELECT * FROM `book`';
+    $query = 'SELECT * FROM `reader`';
     $genre = func_get_args()[0] ?? null; // Jeigu paduodamas parametras atrinkimui pagal žanrą
     if (isset($genre)) $query .= ' WHERE genre LIKE :genre'; // Papildoma užklausa
     $pdoStatement = $this->db->prepare($query); // Paruošiama užklausa

@@ -11,25 +11,25 @@
           <a class="nav-link" href="<?php echo ROOT ?>home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>gallery">Gallery</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" role="button">Catalog</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog">All genres</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/fantasy">Fantasy</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/biography">Biography</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/scifi">Science fiction</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/detectives">Detectives</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/poetry">Poetry</a>
-            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/science">Science</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/novels">Novels</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/adventure">Adventure</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/war">War</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/instructional">Instructional</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/stories">Stories</a>
+            <a class="dropdown-item" href="<?php echo ROOT ?>catalog/politics">Politics</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>reader">Readers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
         </li>
       </ul>
     </div>
