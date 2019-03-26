@@ -34,7 +34,13 @@
       </ul>
       <ul class="navbar-nav float-right">
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>login">Login</a>
+        <?php
+        if (Session::get('loggedIn')) {
+          echo '<a class="nav-link" href="' . ROOT . 'login/logout">Logout</a>';
+        } else {
+          echo '<a class="nav-link" href="' . ROOT . 'login">Login</a>';
+        }
+        ?>
         </li>
       </ul>
     </div>

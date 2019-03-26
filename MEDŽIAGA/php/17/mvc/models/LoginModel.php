@@ -25,7 +25,7 @@ class LoginModel extends Model
       ':pass' => $data['pass']
     ]);
     $result = ($pdoStatement->fetchAll(PDO::FETCH_ASSOC));
-    return (count($result) > 0) ? $result : false;
+    return (count($result) > 0) ? $result[0] : false;
     // return $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
   }
 
