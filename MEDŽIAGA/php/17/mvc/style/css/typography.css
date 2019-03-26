@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'hand writen';
+  src: url(../fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+  font-family: old newspaper;
+  src: url(../fonts/OldNewspaperTypes.ttf);
+}
+
+body{
+  font-family: old newspaper;
+  font-weight: 400;
+}
+
+.text-primary{
+  color: #841811 !important;
+}
+
+.hand-writen{
+  font-family: 'hand writen';
+}
+
+
