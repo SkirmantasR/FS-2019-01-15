@@ -1,4 +1,7 @@
-.bg-brown th{
+.table-striped{
+  text-align: center
+}
+.table-striped .bg-brown th{
   background-color: #240f0a;
   color: #fff;
 }
