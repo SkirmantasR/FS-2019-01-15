@@ -25,9 +25,14 @@
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog/politics">Politics</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>reader">Readers</a>
-        </li>
+        <?php
+        if (Session::get('loggedIn') && Session::get('role') == 'moderator') {
+          echo '
+          <li class="nav-item">
+            <a class="nav-link" href="' . ROOT . 'reader">Readers</a>
+          </li>';
+        }
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
         </li>
