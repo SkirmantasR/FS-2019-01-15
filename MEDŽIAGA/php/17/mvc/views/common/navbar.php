@@ -13,6 +13,10 @@
         <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>gallery">Gallery</a>
         </li>
+        
+        <?php
+        if (Session::get('loggedIn') && (Session::get('role') == 'reader' || Session::get('role') == 'librarian')) {
+        ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" role="button">Catalog</a>
           <div class="dropdown-menu">
@@ -26,6 +30,7 @@
           </div>
         </li>
         <?php
+        }
         if (Session::get('loggedIn') && Session::get('role') == 'moderator') {
           echo '
           <li class="nav-item">

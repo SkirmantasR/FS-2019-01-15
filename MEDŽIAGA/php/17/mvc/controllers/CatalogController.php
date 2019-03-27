@@ -5,6 +5,9 @@ class CatalogController extends Controller
   public function __construct($name)
   {
     parent::__construct($name);
+    if (!Session::get('loggedIn') || !(Session::get('role') == 'reader' || Session::get('role') == 'librarian')) {
+      header('Location: ' . ROOT . 'login');
+    }
   }
 
   public function index()
