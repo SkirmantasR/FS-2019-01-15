@@ -6,15 +6,17 @@ class LoginController extends Controller
   {
     parent::__construct($name);
   }
-
+  
   public function index()
   {
+    if (Session::get('loggedIn')) header('Location: ' . ROOT . 'home');
     $this->view->args['form'] = 'login';
     parent::index();
   }
 
   public function login()
   {
+    if (Session::get('loggedIn')) header('Location: ' . ROOT . 'home');
     if (isset($_POST, $_POST['login'])) {
       $data = [
         'user' => $_POST['user'],
@@ -23,10 +25,18 @@ class LoginController extends Controller
       // TODO: validation
       $loginResult = $this->model->login($data);
       if ($loginResult != false) {
-        // Pavyko prisijungti
-        var_dump($loginResult);
+        Session::set('id', $loginResult['id']);
+        Session::set('role', $loginResult['role']);
+        Session::set('loggedIn', true);
+        if ($loginResult['role'] != 'reader') {
+          Session::set('name', $loginResult['name']);
+          Session::set('surname', $loginResult['surname']);
+          Session::set('email', $loginResult['email']);
+          Session::set('phone', $loginResult['phone']);
+        }
+        header('Location: ' . ROOT . 'home');
       } else {
-        // nelab  ai pavyko prisijungti, bičiuli
+        // nelabai pavyko prisijungti, bičiuli
         // TODO:  pranešimas apie blogą prisijungimą
         header('Location: ' . ROOT . 'login');
       }
@@ -39,17 +49,19 @@ class LoginController extends Controller
 
   public function logout()
   {
-
+    Session::redirectToLogin();
   }
 
   public function register()
   {
+    if (Session::get('loggedIn')) header('Location: ' . ROOT . 'home');
     $this->view->args['form'] = 'register';
     parent::index();
   }
 
   public function forgot()
   {
+    if (Session::get('loggedIn')) header('Location: ' . ROOT . 'home');
     $this->view->args['form'] = 'forgot';
     parent::index();
   }

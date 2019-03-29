@@ -11,8 +11,17 @@
           <a class="nav-link" href="<?php echo ROOT ?>home">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>gallery">Gallery</a>
         </li>
+      </ul>
+      <ul class="navbar-nav float-right">
+        <li class="nav-item">
+          <?php
+          if (Session::get('loggedIn') && (Session::get('role') == 'reader' || Session::get('role') == 'librarian')) {
+            ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" role="button">Catalog</a>
           <div class="dropdown-menu">
@@ -25,16 +34,29 @@
             <a class="dropdown-item" href="<?php echo ROOT ?>catalog/politics">Politics</a>
           </div>
         </li>
+        <?php
+
+      }
+      if (Session::get('loggedIn') && Session::get('role') == 'admin') {
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo ROOT ?>admin">User management</a>
+        </li>
+        <?php
+      }
+      if (Session::get('loggedIn') && Session::get('role') == 'moderator') {
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="<?php echo ROOT ?>reader">Readers</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>contacts">Contacts</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav float-right">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo ROOT ?>login">Login</a>
+        <?php
+      }
+      if (Session::get('loggedIn')) {
+        echo '<a class="nav-link" href="' . ROOT . 'login/logout">Logout</a>';
+      } else {
+        echo '<a class="nav-link" href="' . ROOT . 'login">Login</a>';
+      }
+      ?>
         </li>
       </ul>
     </div>
