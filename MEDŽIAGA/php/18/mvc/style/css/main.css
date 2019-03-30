@@ -1,0 +1,61 @@
+.content{
+  background: url(../img/background.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.content>.container{
+  background: #ffffffe1;
+  padding-top: 56px;
+  height: 100vh;
+  box-shadow: 
+    1px 0 1px #000,
+    inset 1px 0 1px #000,
+    inset 1px 0 3px #000,
+    -1px 0 2px #000,
+    inset -1px 0 1px #000,
+    inset -1px 0 3px #000;
+}
+
+nav{
+  box-shadow: 2px 2px 1px #000;
+}
+
+.user-profile-link{
+  color: goldenrod !important;
+  margin-left: 20px;
+}
+
+.bg-brown{
+  background-color: #240f0a;
+}
+
+h1{
+  color: #240f0a;
+  text-shadow: 1px 1px 1px;
+  margin: 20px 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #cfc2aa; 
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: radial-gradient( #cfa76a, #240f0a 67% ); 
+  border-radius: 2px;
+  transition: all .6s ease; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient( #cfa76a, #240f0a 73% );
+}
