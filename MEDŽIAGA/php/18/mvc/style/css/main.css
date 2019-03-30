@@ -1,14 +1,14 @@
 .content{
   background: url(../img/background.jpg);
-  height: 100vh;
   background-position: center;
+  min-height: 100vh;
   background-size: cover;
 }
 
 .content>.container{
   background: #ffffffe1;
   padding-top: 56px;
-  height: 100vh;
+  min-height: 100vh;
   box-shadow: 
     1px 0 1px #000,
     inset 1px 0 1px #000,
