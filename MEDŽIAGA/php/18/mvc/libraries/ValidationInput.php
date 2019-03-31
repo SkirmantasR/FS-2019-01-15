@@ -7,14 +7,21 @@ class ValidationInput
   public function __construct($input)
   {
     $this->input = $input;
-    $this->success = true;
     $this->errors = [];
   }
 
-  public function length($from, $to)
+  public function empty()
   {
-    if (!($from <= strlen($this->input) && strlen($this->input) <= $to)) 
-      array_push($this->errors, "Must have $from to $to letters");
+    if (empty($this->input)) array_push($this->errors, 'Input is empty');
+    return $this;
+  }
+
+  public function length($from, $to = 'not set')
+  {
+    if ($to === 'not set') {
+      if(strlen($this->input) != $from) array_push($this->errors, "Input must have $from symbols");
+    } elseif ($from > strlen($this->input) || strlen($this->input) > $to)
+        array_push($this->errors, "Must have $from to $to symbols");
     return $this;
   }
 
@@ -23,7 +30,7 @@ class ValidationInput
     $capitals = 0;
     $input = $this->input;
     for ($i = 0; $i < strlen($input); $i++) if (ucfirst($input[$i]) === $input[$i]) $capitals++;
-    if ($capitals < $number)  array_push($this->errors, "At least $number capitals");
+    if ($capitals < $number) array_push($this->errors, "Input must have at least $number capitals");
     return $this;
   }
 
@@ -36,17 +43,27 @@ class ValidationInput
       if ($input[$i] === '@') $etaIndex = $i;
       if ($input[$i] === '.' && ($i - $etaIndex) > 2) $dotIndex = $i;
     }
-    if(!($dotIndex > 0 && (strlen($input) - $dotIndex) > 1)) array_push($this->errors, 'Not good email');
+    if (!($dotIndex > 0 && (strlen($input) - $dotIndex) > 1)) array_push($this->errors, 'Please submit correct email format');
     return $this;
   }
 
-  public function success(){
-    return (count($this->errors) > 0)? false: true;
+  public function number(){
+    if(!is_numeric($this->input)) array_push($this->errors, 'Please submit only numbers');
+    return $this;
+  }
+
+  public function success()
+  {
+    return (count($this->errors) > 0) ? false : true;
+  }
+
+  public function getErrors(){
+    return $this->errors;
   }
 
 
-  public function getValue()
+  public function value()
   {
-    return $input;
+    return $this->input;
   }
 }
