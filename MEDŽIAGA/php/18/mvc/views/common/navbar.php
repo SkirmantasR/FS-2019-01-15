@@ -56,20 +56,22 @@
       if (Session::get('loggedIn')) {
         ?>
         <li class="nav-item">
-          <a class="nav-link user-profile-link" href="<?php echo ROOT ?>reader">
-            <?php if (Session::get('name') && Session::get('surname')) { ?>
+          <a class="nav-link user-profile-link" href="<?php echo ROOT ?>home">
+            <?php 
+            if (Session::get('name') && Session::get('surname')) {
+              {{}}?>
             <span><?php echo Session::get('name') ?></span>
             <span><?php echo Session::get('surname') ?></span>
-          </a>
-          <?php
+            <?php
 
-        } else {
+          } else {
+            ?>
+            <span><?php echo ucfirst(Session::get('role')) ?></span>
+            <?php
+
+          }
           ?>
-          <span><?php echo ucfirst(Session::get('role')) ?></span>
-          <?php
-
-        }
-        ?>
+          </a>
         </li>
         <?php
 

@@ -1,7 +1,7 @@
 <?php
 if (count($this->args['readers']) > 0) {
   echo '<h1>' . ucfirst($this->args['header']) . '</h1>';
-?>
+  ?>
 <table class="table table-striped">
   <thead class="bg-brown
   ">
@@ -13,21 +13,22 @@ if (count($this->args['readers']) > 0) {
     </tr>
   </thead>
   <tbody>
-<?php
-  foreach ($this->args['readers'] as $reader) {
-?>
+    <?php
+foreach ($this->args['readers'] as $reader) {
+  ?>
     <tr>
       <td><?php echo $reader['name'] ?></td>
       <td><?php echo $reader['surname'] ?></td>
       <td><?php echo $reader['email'] ?></td>
       <td><?php echo $reader['phone'] ?></td>
     </tr>
-<?php 
-  } 
+    <?php 
+}
 ?>
   </tbody>
 </table>
 <?php
-}else{
+
+} else {
   echo '<h1>There are no readers at the moment ;)</h1>';
 }
